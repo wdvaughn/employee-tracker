@@ -1,0 +1,25 @@
+{
+  "name": "employee-tracker",
+  "version": "1.0.0",
+  "description": "Use node to manage mySQL databases with employment information",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "William Vaughn",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wdvaughn/employee-tracker.git"
+  },
+  "bugs": {
+    "url": "https://github.com/wdvaughn/employee-tracker/issues"
+  },
+  "homepage": "https://github.com/wdvaughn/employee-tracker#readme",
+  "dependencies": {
+    "console.table": "^0.10.0",
+    "inquirer": "^7.0.6",
+    "mysql": "^2.18.1"
+  }
+}
