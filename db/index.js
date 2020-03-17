@@ -1,57 +1,66 @@
 const connection = require("./connection");
 
 class DB {
-    constructor(connection) {
-        this.connection = connection;
-    }
+  constructor(connection) {
+    this.connection = connection;
+  }
 
-    findAllEmployees() {
-        return this.connection.query(
-            "SELECT employee.id, employee.first_name, employee.last_name, role.title, department.name AS department, role.salary, " +
-            "CONCAT (manager.first_name, ' ', manager.last_name) AS manager FROM employee LEFT JOIN role on employee.role_id = role.id " +
-            "LEFT JOIN department on role.department_id = department.id LEFT JOIN employee manager on manager.id = employee.manager_id;"
-        );
-    }
+  findAllEmployees() {
+    return this.connection.query(
+      "SELECT employee.id, employee.first_name, employee.last_name, role.title, department.name AS department, role.salary, " +
+      "CONCAT (manager.first_name, ' ', manager.last_name) AS manager FROM employee LEFT JOIN role on employee.role_id = role.id " +
+      "LEFT JOIN department on role.department_id = department.id LEFT JOIN employee manager on manager.id = employee.manager_id;"
+    );
+  }
 
-    findAllDepartments() {
-        return this.connection.query("SELECT * FROM department");
-    }
+  findManagedEmployees(managerId) {
+    return this.connection.query(
+      "SELECT employee.id, employee.first_name, employee.last_name, role.title, department.name AS department, role.salary, " +
+      "CONCAT (manager.first_name, ' ', manager.last_name) AS manager FROM employee LEFT JOIN role on employee.role_id = role.id " +
+      "LEFT JOIN department on role.department_id = department.id LEFT JOIN employee manager on manager.id = employee.manager_id " +
+      "WHERE employee.manager_id = ?;", managerId
+    );
+  }
 
-    findAllRoles() {
-        return this.connection.query("SELECT * FROM role");
-    }
+  findAllDepartments() {
+    return this.connection.query("SELECT * FROM department");
+  }
 
-    createEmployee(employee) {
-        return this.connection.query("INSERT INTO employee SET ?", employee);
-    }
+  findAllRoles() {
+    return this.connection.query("SELECT * FROM role");
+  }
 
-    createDepartment(department) {
-        return this.connection.query("INSERT INTO department SET ?", department);
-    }
+  createEmployee(employee) {
+    return this.connection.query("INSERT INTO employee SET ?", employee);
+  }
 
-    createRole(role) {
-        return this.connection.query("INSERT INTO role SET ?", role);
-    }
+  createDepartment(department) {
+    return this.connection.query("INSERT INTO department SET ?", department);
+  }
 
-    updateEmployeeRole(employeeId, roleId) {
-        return this.connection.query("UPDATE employee SET role_id = ? WHERE id = ?", [roleId, employeeId]);
-    }
+  createRole(role) {
+    return this.connection.query("INSERT INTO role SET ?", role);
+  }
 
-    updateEmployeeManager(employeeId, managerId) {
-        return this.connection.query("UPDATE employee SET manager_id = ? WHERE id = ?", [managerId, employeeId]);
-    }
+  updateEmployeeRole(employeeId, roleId) {
+    return this.connection.query("UPDATE employee SET role_id = ? WHERE id = ?", [roleId, employeeId]);
+  }
 
-    deleteEmployee(employeeId) {
-        return this.connection.query("DELETE FROM employee WHERE id = ?", [employeeId]);
-    }
+  updateEmployeeManager(employeeId, managerId) {
+    return this.connection.query("UPDATE employee SET manager_id = ? WHERE id = ?", [managerId, employeeId]);
+  }
 
-    deleteDepartment(departmentId) {
-        return this.connection.query("DELETE FROM department WHERE id = ?", [departmentId]);
-    }
+  deleteEmployee(employeeId) {
+    return this.connection.query("DELETE FROM employee WHERE id = ?", [employeeId]);
+  }
 
-    deleteRole(roleId) {
-        return this.connection.query("DELETE FROM role WHERE id = ?", [roleId]);
-    }
+  deleteDepartment(departmentId) {
+    return this.connection.query("DELETE FROM department WHERE id = ?", [departmentId]);
+  }
+
+  deleteRole(roleId) {
+    return this.connection.query("DELETE FROM role WHERE id = ?", [roleId]);
+  }
 }
 
 module.exports = new DB(connection);
