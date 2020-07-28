@@ -1,4 +1,4 @@
-# Employeetracker
+# Employee tracker
 
 ## How Employee Tracker Works
 Use node to manage mySQL databases with employment information.
