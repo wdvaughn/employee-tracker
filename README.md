@@ -6,7 +6,7 @@ Use node to manage mySQL databases with employment information.
 
 ## Technologies Used
 
-javascript, node, mySQL
+javascript, node, MySQL
 
 ## Possible Operations
 Here is a list of all operations and an example execution of them
