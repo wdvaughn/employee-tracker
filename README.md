@@ -27,14 +27,29 @@ Show all roles in database
 ![image](./View-All-Roles.png)
 
 ## Add Employee
+Add employee to database by asking for thier name, role, and manager.
+
+![image](./Add-Employee.png)
 
 ## Add Department
+Add department to database.
+
+![image](./Add-Department.png)
 
 ## Add Role
+Add role to database by asking for its title, salary, and department.
+
+![image](./Add-Role.png)
 
 ## Update Employee Role
+Changes an employees role to another role in the database
+
+![image](./Update-Employee-Role.png)
 
 ## Update Employee Manager
+Changes an employees manager to another employee in the database
+
+![image](./Update-Employee-Manager.png)
 
 ## Delete Employee
 
