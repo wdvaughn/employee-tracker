@@ -1,7 +1,7 @@
 # employee-tracker
 
 ## How Employee Tracker Works
-Use node to manage mySQL databases with employment information
+Use node to manage mySQL databases with employment information.
 
 
 ## Technologies Used
