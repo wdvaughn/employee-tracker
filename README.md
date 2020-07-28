@@ -17,8 +17,14 @@ Show all employees in database
 ![image](./View-All-Employees.png)
 
 ## View All Departments
+Show all departments in database
+
+![image](./View-All-Departments.png)
 
 ## View All Roles
+Show all roles in database
+
+![image](./View-All-Roles.png)
 
 ## Add Employee
 
