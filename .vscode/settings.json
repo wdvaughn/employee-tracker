@@ -1,5 +1,6 @@
 {
   "eslint.autoFixOnSave": true,
   "editor.formatOnSave": true,
-  "editor.tabSize": 2
+  "editor.tabSize": 2,
+  "editor.detectIndentation": false
 }
