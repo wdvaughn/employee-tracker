@@ -52,6 +52,7 @@ Changes an employee's manager to another employee in the database
 ![image](./Update-Employee-Manager.png)
 
 ## Delete Employee
+Deletes the chosen employee from the database.  Note, due to the database's setup deleting an employee does not reset the numerical id of employees after it.
 
 ## Delete Department
 
