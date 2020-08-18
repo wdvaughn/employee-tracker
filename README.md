@@ -67,6 +67,9 @@ Deletes the chosen role from the database along with any employees in that role.
 ![image](./Delete-Role.png)
 
 ## View Department Budget
+Display the total salary of all employees under the chosen department.
+
+![image](./View-Department-Budget.png)
 
 ## View Employees By Manager
 
