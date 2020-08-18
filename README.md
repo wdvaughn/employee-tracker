@@ -77,3 +77,4 @@ Displays all employees who are managed by the chosen employee.
 ![image](./View-Employees-By-Manager.png)
 
 ## Quit
+Ends the program
