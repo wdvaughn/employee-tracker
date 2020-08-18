@@ -72,5 +72,8 @@ Display the total salary of all employees under the chosen department.
 ![image](./View-Department-Budget.png)
 
 ## View Employees By Manager
+Displays all employees who are managed by the chosen employee.
+
+![image](./View-Employees-By-Manager.png)
 
 ## Quit
