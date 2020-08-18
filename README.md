@@ -47,7 +47,7 @@ Changes an employees role to another role in the database
 ![image](./Update-Employee-Role.png)
 
 ## Update Employee Manager
-Changes an employees manager to another employee in the database
+Changes an employee's manager to another employee in the database
 
 ![image](./Update-Employee-Manager.png)
 
