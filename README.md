@@ -57,6 +57,9 @@ Deletes the chosen employee from the database.  Note, due to the database's setu
 ![image](./Delete-Employee.png)
 
 ## Delete Department
+Deletes the chosen department along with any roles in that department and any employees in those roles from the database.  Note, due to the database's setup deleting a department does not reset the numerical id of employees after it.
+
+![image](./Delete-Department.png)
 
 ## Delete Role
 
