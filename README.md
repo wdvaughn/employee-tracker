@@ -8,6 +8,9 @@ Use node to manage MySQL databases with employment information.
 
 javascript, node, MySQL
 
+## Start up
+To start up program type into command line "node index.js"
+
 ## Possible Operations
 Here is a list of all operations and an example execution of them
 
